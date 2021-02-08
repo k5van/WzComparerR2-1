@@ -329,9 +329,9 @@ namespace WzComparerR2.MapRender
         private Frame LoadFrame(Wz_Node node)
         {
             //处理uol
-            while (node?.Value is Wz_Uol uol)
+            while (node?.Value is Wz_Uol)
             {
-                node = uol.HandleUol(node);
+                node = ((Wz_Uol)node.Value).HandleUol(node);
             }
             if (node == null)
             {

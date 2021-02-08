@@ -733,7 +733,7 @@ namespace WzComparerR2.CharaSim
                         default:
                             {
                                 GearPropType type;
-                                if (!int.TryParse(subNode.Text, out _) && Enum.TryParse(subNode.Text, out type))
+                                if (Enum.TryParse(subNode.Text, out type))
                                 {
                                     try
                                     {
